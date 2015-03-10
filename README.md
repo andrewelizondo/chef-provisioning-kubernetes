@@ -20,8 +20,10 @@ machine_batch do # build out kubernetes nodes
 end
 
 kube_pod 'my-app' do # create a kubernetes pod structure
+    nodes ['app','web','db']
 end
 
 kube_service 'backend' do # make a backend kubernetes service
+    nodes ['db']
 end
 ```
