@@ -12,7 +12,7 @@ class Chef
           @port = 8080
           @api_version = 'v1beta2'
           @url = "http://#{server}:#{port}/#{api_version}"
-          @connection = client_for(url)
+          @connection ||= client_for(url)
         end
 
         def client_for(url)
