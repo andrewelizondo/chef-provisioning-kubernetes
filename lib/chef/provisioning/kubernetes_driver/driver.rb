@@ -2,6 +2,11 @@ require 'chef/provisioning/driver'
 require 'chef/provisioning/convergence_strategy/install_cached'
 require 'chef/provisioning/convergence_strategy/install_sh'
 require 'chef/provisioning/convergence_strategy/no_converge'
+require 'chef/provisioning/transport/ssh'
+require 'chef/provisioning/machine/unix_machine'
+require 'chef/provisioning/machine_spec'
+require 'chef/provisioning/kubernetes_driver/version'
+require 'chef/provisioning/kubernetes_driver/kubernetes_transport'
 
 class Chef
   module Provisioning
